@@ -1,21 +1,72 @@
-# Devpost Hackathon Website
+# Hackathon Website
 
-A web application designed to support hackathon participants by providing useful tools such as AI-generated quizzes, personalized timetables, and user authentication. The platform aims to enhance learning, organization, and productivity during hackathons.
+A full-featured web application designed to assist hackathon participants by providing interactive tools such as AI-powered quiz generation, personalized timetable creation, and secure user authentication. The platform helps users learn efficiently, manage their time, and track progress during hackathons or intense study sessions.
+
+---
+
+## Table of Contents
+
+- [Features](#features)  
+- [Demo](#demo)  
+- [Tech Stack](#tech-stack)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [Challenges Faced](#challenges-faced)  
+- [Future Enhancements](#future-enhancements)  
+- [Contributing](#contributing)  
+- [License](#license)  
+- [Contact](#contact)
 
 ---
 
 ## Features
 
-- **User Authentication:** Secure login and signup system to manage user access.
-- **AI-Powered Quiz Generator:** Create multiple-choice quizzes based on user-selected topics, difficulty levels, and the number of questions.
-- **Document-Based Quiz Creation:** Upload documents to extract content and generate quiz questions automatically.
-- **Interactive Results Visualization:** Display quiz results with graphs for better insights.
-- **Personalized Timetable Generator:** Users can create and download daily schedules tailored to their needs.
+- **User Authentication:**  
+  Secure login/signup system with validation to protect user data and sessions.
+
+- **AI-Powered Quiz Generator:**  
+  Generate multiple-choice quizzes tailored by topic, difficulty, and question count.
+
+- **Document-Based Quiz Creation:**  
+  Upload documents (PDF, DOCX, TXT) to automatically extract content and generate relevant quiz questions.
+
+- **Interactive Result Visualization:**  
+  Display quiz results with graphs and charts to provide clear performance insights.
+
+- **Personalized Timetable Generator:**  
+  Create custom daily schedules based on user input, with an option to download the timetable for offline use.
+
+- **Responsive UI:**  
+  Mobile-friendly design ensuring seamless user experience across devices.
+
+---
+
+## Demo
+
+[Live Demo Link (Updating Soon)]  
+
+
+---
+
+## Tech Stack
+
+| Layer          | Technology / Library              | Purpose                                |
+| -------------- | -------------------------------- | ------------------------------------ |
+| Frontend       | React / Vue / Angular             | User interface and client-side logic |
+| Styling        | CSS / TailwindCSS / Bootstrap    | Responsive and modern UI design       |
+| Backend        | Node.js + Express / Django / Flask | RESTful API, business logic           |
+| Database       | MongoDB / PostgreSQL / MySQL     | Data storage (users, quizzes, schedules) |
+| Authentication | JWT / OAuth                      | Secure user authentication            |
+| AI Integration | OpenAI API / Hugging Face        | Quiz question generation              |
+| File Upload    | Multer / Django REST Framework   | Handling document uploads             |
+| Data Visualization | Chart.js / Recharts / D3.js   | Graphical representation of quiz results |
 
 ---
 
 ## Installation
 
-1. Clone the repository:
+Follow these steps to run the project locally:
+
+1. Clone the repo  
    ```bash
    git clone https://github.com/piyushjha162/Devpost_Hackathon.git
