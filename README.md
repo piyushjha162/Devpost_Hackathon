@@ -54,11 +54,8 @@ A full-featured web application designed to assist hackathon participants by pro
 | -------------- | -------------------------------- | ------------------------------------ |
 | Frontend       | React / Vue / Angular             | User interface and client-side logic |
 | Styling        | CSS / TailwindCSS / Bootstrap    | Responsive and modern UI design       |
-| Backend        | Node.js + Express / Django / Flask | RESTful API, business logic           |
-| Database       | MongoDB / PostgreSQL / MySQL     | Data storage (users, quizzes, schedules) |
 | Authentication | JWT / OAuth                      | Secure user authentication            |
 | AI Integration | OpenAI API / Hugging Face        | Quiz question generation              |
-| File Upload    | Multer / Django REST Framework   | Handling document uploads             |
 | Data Visualization | Chart.js / Recharts / D3.js   | Graphical representation of quiz results |
 
 ---
