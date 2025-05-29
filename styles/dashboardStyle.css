@@ -1,0 +1,97 @@
+/* Dark Theme Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.navbar {
+  background-color: #1e1e1e;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff79c6;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-name {
+  background: #2d2d2d;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #50fa7b;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.user-name:hover {
+  background: #3c3c3c;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: #2d2d2d;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 10;
+}
+
+.dropdown.show {
+  display: block;
+}
+
+.dropdown button {
+  background: none;
+  border: none;
+  color: #f5f5f5;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.dropdown button:hover {
+  color: #ff5555;
+}
+
+.dashboard-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #2b2b2b;
+  transform: translateY(-5px);
+}
