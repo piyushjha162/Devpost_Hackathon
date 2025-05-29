@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles/dashboardStyle.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🚀 Hackathon Hub</div>
+    <div class="user-menu">
+      <span id="userName" class="user-name">User</span>
+      <div class="dropdown" id="dropdownMenu">
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="dashboard-content">
+    <h1>Welcome to your Dashboard</h1>
+    <p>Select an option to get started:</p>
+    <div class="card-grid">
+      <div class="card">🧠 Take Quiz</div>
+      <div class="card">📅 Generate Timetable</div>
+      <div class="card">✨ More Coming</div>
+    </div>
+  </main>
+
+  <script>
+    // Load username
+    const username = localStorage.getItem("username") || "User";
+    document.getElementById("userName").innerText = username;
+
+    // Dropdown toggle
+    const userNameEl = document.getElementById("userName");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    userNameEl.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("show");
+    });
+
+    // Logout
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.clear();
+      window.location.href = 'index.html';
+    });
+
+    // Hide dropdown if clicked outside
+    window.addEventListener("click", (e) => {
+      if (!userNameEl.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.remove("show");
+      }
+    });
+  </script>
+</body>
+</html>
