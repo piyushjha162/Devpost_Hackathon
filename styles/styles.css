@@ -1,72 +1,85 @@
-/* Reset styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Center container */
-body {
-  height: 100vh;
+body.dark {
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #667eea, #764ba2);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
 }
 
-/* Form container */
-.container {
-  background-color: white;
-  padding: 2rem;
+.login-container {
+  background: #1e1e1e;
+  padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
   width: 90%;
   max-width: 400px;
-}
-
-/* Form elements */
-.login-form {
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
 
 .login-form h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-.login-form input {
-  padding: 0.75rem;
-  margin: 0.5rem 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+.login-form p {
+  margin-bottom: 20px;
+  color: #cccccc;
 }
 
-.login-form button {
-  padding: 0.75rem;
-  background-color: #667eea;
-  color: white;
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  font-size: 0.9rem;
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.75rem;
+  color: #0af;
+  background-color: #1e1e1e;
+  padding: 0 4px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #0af;
   border: none;
-  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
   cursor: pointer;
-  margin-top: 0.5rem;
+  transition: 0.3s;
 }
 
-.login-form button:hover {
-  background-color: #5a67d8;
+.btn:hover {
+  background: #0080ff;
 }
 
-/* Separator text */
-.separator {
+.divider {
   text-align: center;
-  margin: 1rem 0;
-  color: #999;
-}
-
-/* Google button container */
-.g_id_signin {
-  display: flex;
-  justify-content: center;
+  color: #666;
+  margin: 20px 0;
 }
