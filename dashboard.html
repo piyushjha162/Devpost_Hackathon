@@ -1,57 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="styles/dashboardStyle.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnIt Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="styles/dashboardStyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">🚀 Hackathon Hub</div>
-    <div class="user-menu">
-      <span id="userName" class="user-name">User</span>
-      <div class="dropdown" id="dropdownMenu">
-        <button id="logoutBtn">Logout</button>
+    <div class="logo">LearnIt</div>
+    <div class="nav-items">
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="user-dropdown">
+        <button class="user-btn" id="userBtn">
+          <img src="" alt="User" class="user-avatar" id="userAvatar">
+          <span id="userName">User</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="#" class="dropdown-item"><i class="fas fa-user"></i> Profile</a>
+          <a href="#" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
+          <a href="#" class="dropdown-item" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <main class="dashboard-content">
-    <h1>Welcome to your Dashboard</h1>
-    <p>Select an option to get started:</p>
-    <div class="card-grid">
-      <div class="card">🧠 Take Quiz</div>
-      <div class="card">📅 Generate Timetable</div>
-      <div class="card">✨ More Coming</div>
+  <main class="main-content">
+    <section class="welcome-section">
+      <h1>Welcome back, <span id="welcomeName">User</span>!</h1>
+      <p>Here's your learning summary for today.</p>
+    </section>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-book-open"></i></div>
+        <h3>Courses Enrolled</h3>
+        <p>5</p>
+        <a href="#" class="stat-link">View all</a>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+        <h3>Hours Learned</h3>
+        <p>24.5</p>
+        <a href="#" class="stat-link">See details</a>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-fire"></i></div>
+        <h3>Current Streak</h3>
+        <p>7 days</p>
+        <a href="#" class="stat-link">Keep going!</a>
+      </div>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-video"></i></div>
+        <h3>Video Lessons</h3>
+        <p>Access high-quality video tutorials from industry experts to enhance your learning experience.</p>
+        <button class="feature-btn">Start Learning</button>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-tasks"></i></div>
+        <h3>Periodic Table</h3>
+        <p>The periodic table is a chart of all chemical elements, arranged by atomic number and properties. Elements in the same column share similar behavior.</p>
+        <a href="perioidTable.html"><button class="feature-btn">Check It Now</button></a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-question-circle"></i></div>
+        <h3>Q&A Forum</h3>
+        <p>Get your questions answered by our community of learners and instructors.</p>
+        <button class="feature-btn">Ask Question</button>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
+        <h3>Projects</h3>
+        <p>Build real-world projects to apply your knowledge and build your portfolio.</p>
+        <button class="feature-btn">View Projects</button>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+        <h3>Progress Tracking</h3>
+        <p>Monitor your learning journey with detailed analytics and progress reports.</p>
+        <button class="feature-btn">View Progress</button>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+        <h3>Certifications</h3>
+        <p>Earn certificates to showcase your skills and achievements to employers.</p>
+        <button class="feature-btn">Get Certified</button>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-users"></i></div>
+        <h3>Study Groups</h3>
+        <p>Collaborate with peers in study groups to enhance your learning experience.</p>
+        <button class="feature-btn">Join Group</button>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile Learning</h3>
+        <p>Learn on the go with our mobile app available for iOS and Android devices.</p>
+        <button class="feature-btn">Download App</button>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+        <h3>24/7 Support</h3>
+        <p>Get help whenever you need it with our round-the-clock support team.</p>
+        <button class="feature-btn">Contact Support</button>
+      </div>
+    </div>
+
+    <div class="motivational-quote">
+      <p class="quote-text">The expert in anything was once a beginner.</p>
+      <p class="quote-author">Helen Hayes</p>
     </div>
   </main>
 
-  <script>
-    // Load username
-    const username = localStorage.getItem("username") || "User";
-    document.getElementById("userName").innerText = username;
-
-    // Dropdown toggle
-    const userNameEl = document.getElementById("userName");
-    const dropdownMenu = document.getElementById("dropdownMenu");
-
-    userNameEl.addEventListener("click", () => {
-      dropdownMenu.classList.toggle("show");
-    });
-
-    // Logout
-    document.getElementById("logoutBtn").addEventListener("click", () => {
-      localStorage.clear();
-      window.location.href = 'index.html';
-    });
-
-    // Hide dropdown if clicked outside
-    window.addEventListener("click", (e) => {
-      if (!userNameEl.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.remove("show");
-      }
-    });
-  </script>
+  <script src="script/dashboardScript.js"></script>
 </body>
 </html>
