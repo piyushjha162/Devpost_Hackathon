@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LearnIt - Learn Easy</title>
+  <link rel="stylesheet" href="styles/loginStyle.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- Google Identity Services -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <!-- Background -->
+  <div class="particles" id="particles"></div>
+  <div class="grid-bg"></div>
+
+  <div class="container">
+    <div class="login-card">
+      <div class="logo">
+        <h1>LearnIt</h1>
+        <p>AI for Learners</p>
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required />
+        </div>
+
+        <button type="submit" class="login-btn">
+          <span class="btn-text">Sign In</span>
+          <div class="loading" id="loading"></div>
+        </button>
+      </form>
+
+      <div class="divider"><span>or continue with</span></div>
+
+      <!-- Google Sign-In Button -->
+      <div id="g_id_signin"></div>
+
+      <div class="signup-link">
+        Don't have an account? <a href="#" id="signupLink">Sign up</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Debug console -->
+  <div id="debug-console" style="position: fixed; top: 10px; right: 10px; background: rgba(0,0,0,0.8); color: white; padding: 10px; font-size: 12px; border-radius: 5px; max-width: 300px; z-index: 9999; display: none;">
+    <div id="debug-messages"></div>
+    <button onclick="document.getElementById('debug-console').style.display='none'" style="float: right; background: red; color: white; border: none; padding: 2px 5px; cursor: pointer;">X</button>
+  </div>
+<!-- Add this inside the <body> of login.html -->
+<div id="error-message" style="display: none; color: red; margin: 10px 0;"></div>
+
+<script>
+  // Check for errors on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const errorDiv = document.getElementById('error-message');
+    const params = new URLSearchParams(window.location.search);
+    
+    if (params.has('error')) {
+      errorDiv.textContent = params.get('error');
+      errorDiv.style.display = 'block';
+    }
+    
+    // Handle logout case
+    if (params.has('logout')) {
+      debugLog("You have been successfully logged out", "success");
+    }
+  });
+</script>
+  <script src="script/loginScript.js"></script>
+</body>
+</html>
